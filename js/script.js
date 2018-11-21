@@ -12,13 +12,22 @@ function convertTemperature() {
 
 	let temperatureResult = undefined;
 
+	const celsjusPanel = document.getElementById("celsjus-panel");
+	const fahrenheitPanel = document.getElementById("fahrenheit-panel");
+
+	celsjusPanel.hidden = true;
+	fahrenheitPanel.hidden = true;
+
+
 	if(toCelsjus == true) {
+		fahrenheitPanel.hidden = false;
 		temperatureResult = ((temperature - 32) / 1.8).toFixed(2);
 		resultCelsjusFromFahrenheit.innerHTML = temperatureResult;
 		resultFarhenheitFromFahrenheit.innerHTML = temperature;
 	}
 
 	if(toFahrenheit == true) {
+		celsjusPanel.hidden = false;
 		temperatureResult = ((temperature * 1.8) + 32).toFixed(2);
 		resultCelsjusFromCelsjus.innerHTML = temperature;
 		resultFarhenheitFromCelsjus.innerHTML = temperatureResult
