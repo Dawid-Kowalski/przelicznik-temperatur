@@ -21,15 +21,28 @@
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
+<!--modal header-->
 		        <h5 class="modal-title" id="askModalLabel">Przelicznik temperatur</h5>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		      	<p>podaj temperaturę</p>
+<!--modal body-->
+				<form>
+					<div class="form-check form-check-inline">
+				    	<input type="radio" class="form-check-input" name="temperature-art" id="temperature-art" value="C">
+				    	<label class="form-check-label" for="temmperature-art">na stopnie celsjusza</label>
+				  	</div>
+					<div class="form-check form-check-inline">
+				    	<input type="radio" class="form-check-input" name="temperature-art" id="temperature-art" value="F">
+				    	<label class="form-check-label" for="temmperature-art">na stopnie fahrenheita</label>
+				  	</div>
+				  		<input type="number" class="form-control" name="temperature">
+				</form>
 		      </div>
 		      <div class="modal-footer">
+<!--modal footer-->
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">zamknij</button>
 		        <button type="button" class="btn btn-primary" onclick="giveTemperature();">przelicz</button>
 		      </div>
