@@ -1,19 +1,27 @@
 function convertTemperature() {
 
-	const isCelsjus = document.getElementById("celsjus").checked;
-	const isFahrenheit = document.getElementById("fahrenheit").checked;
+	const toCelsjus = document.getElementById("celsjus").checked;
+	const toFahrenheit = document.getElementById("fahrenheit").checked;
 	const temperature =  document.getElementById("temperature").value;
+
+	const resultCelsjusFromCelsjus = document.getElementById("c-celsjus-result");
+	const resultFarhenheitFromCelsjus = document.getElementById("c-fahrenheit-result");
+	const resultCelsjusFromFahrenheit = document.getElementById("f-celsjus-result");
+	const resultFarhenheitFromFahrenheit = document.getElementById("f-fahrenheit-result");
+
 
 	let temperatureResult = undefined;
 
-	if(isCelsjus == true) {
+	if(toCelsjus == true) {
 		temperatureResult = ((temperature - 32) / 1.8).toFixed(2);
-		alert("temperatura w celsjuszach: " + temperatureResult + "\n" + " temperatura w fahrenheitah: " + temperature);
+		resultCelsjusFromFahrenheit.innerHTML = temperatureResult;
+		resultFarhenheitFromFahrenheit.innerHTML = temperature;
 	}
 
-	if(isFahrenheit == true) {
+	if(toFahrenheit == true) {
 		temperatureResult = ((temperature * 1.8) + 32).toFixed(2);
-		alert("temperatura w celsjuszach: " + temperature + "\n" + " temperatura w fahrenheitah: " + temperatureResult);
+		resultCelsjusFromCelsjus.innerHTML = temperature;
+		resultFarhenheitFromCelsjus.innerHTML = temperatureResult
 	}
 		
 }
