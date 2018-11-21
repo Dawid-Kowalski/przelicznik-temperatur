@@ -31,11 +31,11 @@
 <!--modal body-->
 				<form>
 					<div class="form-check form-check-inline">
-				    	<input type="radio" class="form-check-input" id="celsjus">
+				    	<input type="radio" class="form-check-input" name="temperature-art" id="celsjus">
 				    	<label class="form-check-label" for="temmperature-art">na stopnie celsjusza</label>
 				  	</div>
 					<div class="form-check form-check-inline">
-				    	<input type="radio" class="form-check-input" id="fahrenheit">
+				    	<input type="radio" class="form-check-input" name="temperature-art" id="fahrenheit">
 				    	<label class="form-check-label" for="temmperature-art">na stopnie fahrenheita</label>
 				  	</div>
 				  		<input type="number" class="form-control" id="temperature">
@@ -44,7 +44,7 @@
 		      <div class="modal-footer">
 <!--modal footer-->
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">zamknij</button>
-		        <button type="button" class="btn btn-primary" onclick="giveTemperature();">przelicz</button>
+		        <button type="button" class="btn btn-primary" onclick="convertTemperature();">przelicz</button>
 		      </div>
 		    </div>
 		  </div>
