@@ -43,12 +43,23 @@
 		      </div>
 		      <div class="modal-footer">
 <!--modal footer-->
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">zamknij</button>
-		        <button type="button" class="btn btn-primary" onclick="convertTemperature();">przelicz</button>
+		        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="convertTemperature();">przelicz</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
-
+<!--results -->
+		<div>
+			<p>Temperatura w Celsjuszach</p>
+			<p id="c-celsjus-result">...</p>
+			<p>Odpowiadająca temperatura w Fahrenheitah</p>
+			<p id="c-fahrenheit-result">...</p>		
+		</div>
+		<div>
+			<p>Temperatura w Fahrenheitah</p>
+			<p id="f-fahrenheit-result">...</p>
+			<p>Odpowiadająca temperatura w Celsjuszach</p>
+			<p id="f-celsjus-result">...</p>
+		</div>
 	</body>
 </html>
