@@ -1,3 +1,7 @@
+
+let temperatureCelsjus;
+let text = "";
+
 function convertTemperature() {
 
 	const toCelsjus = document.getElementById("celsjus").checked;
@@ -9,23 +13,19 @@ function convertTemperature() {
 	const resultCelsjusFromFahrenheit = document.getElementById("f-celsjus-result");
 	const resultFarhenheitFromFahrenheit = document.getElementById("f-fahrenheit-result");
 
-	let temperatureResult = undefined;
+	let temperatureResult;
 
 	const celsjusPanel = document.getElementById("celsjus-panel");
 	const fahrenheitPanel = document.getElementById("fahrenheit-panel");
 	const textPanel = document.getElementById("text-panel");
 
-	let temperatureCelsjus = undefined;
-
 	const textTemperature = document.getElementById("text-temperature");
-
-	let text = "";
 
 	celsjusPanel.hidden = true;
 	fahrenheitPanel.hidden = true;
 	textPanel.hidden = true;
 
-	if(toCelsjus == false && toFahrenheit == false) {
+	if(toCelsjus === false && toFahrenheit === false) {
 		alert("nie zaznaczono jednostki temperatury");
 	}
 
@@ -51,8 +51,16 @@ function convertTemperature() {
 			resultFarhenheitFromCelsjus.innerHTML = temperatureResult
 			temperatureCelsjus = temperature;
 		}
+		
+	checkTemperatureInfo();
 
+	textTemperature.innerHTML = text;
 
+	}
+}
+
+function checkTemperatureInfo() {
+	console.log("weszło");
 	if(temperatureCelsjus > 30) {
 		text = "Polacy śpią bez żadnego nakrycia. Amerykanie zakładają swetry. Mieszkańcy Miami włączają ogrzewanie.";
 	} else if (temperatureCelsjus > 20) {
@@ -97,9 +105,5 @@ function convertTemperature() {
 		text = "Rosjanie nie zdejmują rękawic nawet przy nalewaniu wódki.";
 	} else {
 		text = "Zamarza spirytus etylowy. Rosjanie są wk*****wieni.";
-	}
-
-	textTemperature.innerHTML = text;
-
 	}
 }
